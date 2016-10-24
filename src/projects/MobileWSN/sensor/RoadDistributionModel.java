@@ -1,4 +1,4 @@
-package projects.MobileWSN;
+package projects.MobileWSN.sensor;
 
 import jsensor.nodes.Node;
 import jsensor.nodes.models.DistributionModelNode;
