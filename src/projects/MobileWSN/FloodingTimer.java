@@ -12,8 +12,6 @@ import jsensor.utils.Position;
  */
 public class FloodingTimer extends TimerEvent {
 
-	private final int INCREMENT = 10;
-
 	@Override
 	public void fire() {
 
@@ -43,18 +41,5 @@ public class FloodingTimer extends TimerEvent {
 		GenerateFilesOmnet.addStartNode(this.node.getID(), destination.getID(), Jsensor.currentTime);
 		this.node.multicast(message);
 
-		this.updateNodePostion(this.node);
-	}
-
-	/**
-	 * Updates a node position
-	 * 
-	 * @param node
-	 *            Node which its position is getting updated
-	 */
-	private void updateNodePostion(Node node) {
-		Position currentPos = node.getPosition();
-		Position newPos = new Position(currentPos.getPosX() + INCREMENT, currentPos.getPosY());
-		node.setPosition(newPos);
 	}
 }
