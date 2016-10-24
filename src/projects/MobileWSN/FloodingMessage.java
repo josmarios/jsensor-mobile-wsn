@@ -1,6 +1,7 @@
 package projects.MobileWSN;
 
 import jsensor.nodes.Node;
+import jsensor.nodes.messages.Inbox;
 import jsensor.nodes.messages.Message;
 
 /**

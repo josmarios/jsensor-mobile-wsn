@@ -15,15 +15,16 @@ public class FloodingTimer extends TimerEvent {
 	@Override
 	public void fire() {
 
-		Node destination = this.node.getRandomNode("FloodingNode");
+		Node destination = this.node.getRandomNode("SinkNode");
 		while (true) {
 			if (destination == null) {
-				destination = this.node.getRandomNode("FloodingNode");
-				continue;
+				destination = this.node.getRandomNode("SinkNode");
+				System.out.println("Destino");
+				System.out.println(destination);
 			}
 
 			if (this.node == destination) {
-				destination = this.node.getRandomNode("FloodingNode");
+				destination = this.node.getRandomNode("SinkNode");
 				continue;
 			}
 			break;

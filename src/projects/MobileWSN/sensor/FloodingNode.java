@@ -32,6 +32,7 @@ public class FloodingNode extends Node {
 				this.messagesIDs.add(floodingMessage.getID());
 
 				if (floodingMessage.getDestination().equals(this)) {
+					System.out.println(this);
 					Jsensor.log("time: " + Jsensor.currentTime + "\t sensorID: " + this.ID + "\t receivedFrom: "
 							+ floodingMessage.getSender().getID() + "\t hops: " + floodingMessage.getHops() + "\t msg: "
 							+ floodingMessage.getMsg().concat(this.ID + ""));
@@ -48,6 +49,7 @@ public class FloodingNode extends Node {
 					}
 
 					if (cont > 0) {
+						
 						floodingMessage.setMsg(floodingMessage.getMsg().concat(this.ID + " - "));
 						this.multicast(message);
 					}
