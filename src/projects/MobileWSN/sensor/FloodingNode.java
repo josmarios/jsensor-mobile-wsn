@@ -3,6 +3,7 @@ package projects.MobileWSN.sensor;
 import java.util.LinkedList;
 
 import jsensor.runtime.Jsensor;
+import jsensor.utils.Configuration;
 import projects.MobileWSN.FloodingMessage;
 import projects.MobileWSN.FloodingTimer;
 import jsensor.nodes.Node;
@@ -18,16 +19,19 @@ public class FloodingNode extends Node {
 
 	@Override
 	public void handleMessages(Inbox inbox) {
+		
+		
 		while (inbox.hasMoreMessages()) {
+			
 
 			Message message = inbox.getNextMessage();
 
 			if (message instanceof FloodingMessage) {
 				FloodingMessage floodingMessage = (FloodingMessage) message;
-
-				if (this.messagesIDs.contains(floodingMessage.getID())) {
-					continue;
-				}
+//				System.out.println("Message Received -" + floodingMessage.getHops());
+				//if (this.messagesIDs.contains(floodingMessage.getID())) {
+					//continue;
+				//}
 
 				this.messagesIDs.add(floodingMessage.getID());
 
@@ -41,6 +45,7 @@ public class FloodingNode extends Node {
 							+ floodingMessage.getSender().getID() + "\t hops: " + floodingMessage.getHops() + "\t msg: "
 							+ floodingMessage.getMsg().concat(this.ID + ""));
 				} else {
+					
 					int n = 999999;
 					int cont = 0;
 					for (int i = 1; i <= n; i++) {
@@ -53,6 +58,8 @@ public class FloodingNode extends Node {
 						floodingMessage.setMsg(floodingMessage.getMsg().concat(this.ID + " - "));
 						this.multicast(message);
 					}
+					//System.out.println(this.getID()+">>>"+this.getPosition().toString());
+					
 				}
 			}
 		}
@@ -69,5 +76,8 @@ public class FloodingNode extends Node {
 			FloodingTimer ft = new FloodingTimer();
 			ft.startRelative(time, this);
 		}
+		
+		SensorMobilityModel ct = new SensorMobilityModel();        
+         ct.start(this, this.getRandom().nextInt(100), Configuration.numberOfRounds, 10);
 	}
 }

@@ -8,7 +8,7 @@ public class DefaultMessageTransmissionModel extends MessageTransmissionModel{
 
 	@Override
 	public float timeToReach(Node startSensor, Node endSensor, Message msg) {
-		return 9;
+		return 200;
 	}
 
 }

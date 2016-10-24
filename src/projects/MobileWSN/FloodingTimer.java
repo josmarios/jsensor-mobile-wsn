@@ -4,7 +4,6 @@ import jsensor.runtime.Jsensor;
 import jsensor.nodes.Node;
 import jsensor.nodes.events.TimerEvent;
 import jsensor.utils.GenerateFilesOmnet;
-import jsensor.utils.Position;
 
 /**
  *

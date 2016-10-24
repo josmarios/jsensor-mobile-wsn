@@ -1,30 +1,40 @@
-Oct 24, 2016 3:38:17 AM jsensor.Main findClass
-SEVERE: null
-java.lang.ClassNotFoundException: projects.MobileWSN.sensor.RoadDistributionModel
-	at java.net.URLClassLoader.findClass(Unknown Source)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at java.lang.Class.forName0(Native Method)
-	at java.lang.Class.forName(Unknown Source)
-	at jsensor.Main.findClass(Main.java:1489)
-	at jsensor.Main.findClass(Main.java:1500)
-	at jsensor.Main.argsParser(Main.java:583)
-	at jsensor.Main.run(Main.java:152)
+out 24, 2016 11:18:14 AM jsensor.Main run
+GRAVE: null
+java.lang.NullPointerException
+	at jsensor.nodes.models.MobilityModel.start(MobilityModel.java:86)
+	at projects.MobileWSN.sensor.FloodingNode.onCreation(FloodingNode.java:80)
+	at jsensor.Main.run(Main.java:186)
 	at jsensor.Main.main(Main.java:79)
 
-Oct 24, 2016 3:38:26 AM jsensor.Main findClass
-SEVERE: null
-java.lang.ClassNotFoundException: projects.MobileWSN.sensor.RoadDistributionModel
-	at java.net.URLClassLoader.findClass(Unknown Source)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at java.lang.Class.forName0(Native Method)
-	at java.lang.Class.forName(Unknown Source)
-	at jsensor.Main.findClass(Main.java:1489)
-	at jsensor.Main.findClass(Main.java:1500)
-	at jsensor.Main.argsParser(Main.java:583)
-	at jsensor.Main.run(Main.java:152)
+out 24, 2016 11:19:05 AM jsensor.Main run
+GRAVE: null
+java.lang.NullPointerException
+	at jsensor.nodes.models.MobilityModel.start(MobilityModel.java:86)
+	at projects.MobileWSN.sensor.FloodingNode.onCreation(FloodingNode.java:80)
+	at jsensor.Main.run(Main.java:186)
+	at jsensor.Main.main(Main.java:79)
+
+out 24, 2016 11:19:38 AM jsensor.Main run
+GRAVE: null
+java.lang.NullPointerException
+	at jsensor.nodes.models.MobilityModel.start(MobilityModel.java:86)
+	at projects.MobileWSN.sensor.FloodingNode.onCreation(FloodingNode.java:80)
+	at jsensor.Main.run(Main.java:186)
+	at jsensor.Main.main(Main.java:79)
+
+out 24, 2016 11:22:10 AM jsensor.Main run
+GRAVE: null
+java.lang.NullPointerException
+	at jsensor.nodes.models.MobilityModel.start(MobilityModel.java:86)
+	at projects.MobileWSN.sensor.FloodingNode.onCreation(FloodingNode.java:80)
+	at jsensor.Main.run(Main.java:186)
+	at jsensor.Main.main(Main.java:79)
+
+out 24, 2016 11:24:14 AM jsensor.Main run
+GRAVE: null
+java.lang.NullPointerException
+	at jsensor.nodes.models.MobilityModel.start(MobilityModel.java:86)
+	at projects.MobileWSN.sensor.FloodingNode.onCreation(FloodingNode.java:80)
+	at jsensor.Main.run(Main.java:186)
 	at jsensor.Main.main(Main.java:79)
 
